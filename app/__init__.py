@@ -1,0 +1,1 @@
+from .routes import buscar_jogador

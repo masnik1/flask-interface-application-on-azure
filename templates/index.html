@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <head>
+  <meta charset="UTF-8">
+  <title>FLASK API - Busca de Jogadores</title>
+  <style type="text/css" media="screen">
+body {
+    margin: 0;
+    padding: 0;
+    background: #e84118;
+   }
+   
+   .buscar-caja {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+   }
+   
+   .buscar-caja:hover > .buscar-txt {
+    width: 240px;
+    padding: 0 6px;
+   }
+   
+   .buscar-caja:hover > .buscar-btn {
+    background: white;
+    color: #e84118;
+   }
+   
+   .buscar-btn {
+    color: #e84118;
+    text-decoration: none;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    color: white;
+    cursor: pointer;
+   }
+   
+   .buscar-btn > i {
+    font-size: 30px;
+   }
+   
+   .buscar-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    font-weight: bold;
+   }
+   .answer-txt {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 1000px;
+    font-weight: bold;
+   }
+</style>
+ </head>
+ <body>
+  <div class="buscar-caja">
+   <input type="text" id="player-input" class="buscar-txt" placeholder="Buscar Jogador..."/>
+   <input type="text" id="team-input" class="buscar-txt" placeholder="Buscar Time..."/>
+   <a id="button-searcher" class="buscar-btn" href=busca onclick = "this.href='/busca?name=' + document.getElementById('player-input').value + '&team=' + document.getElementById('team-input').value "> 
+    <i class="fa fa-search"></i>
+   </a>
+  </form>
+  </div>
+ </body>
+ <div type="text" class="answer-txt">{{ value }}</div>
+</html>
