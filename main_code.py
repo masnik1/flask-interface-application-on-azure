@@ -16,7 +16,7 @@ def busca():
     name, age, club, position, market_value = buscar_jogador(NAME_PLAYER, TEAM_PLAYER)
     string_sender = name + ','
 
-    if string_sender != ',':
+    if string_sender == ',':
         string_return = 'Informações não encontradas'
     else:
         string_return = name + ', jogador do: ' + club + ' possui: ' + age + ' anos' + ', joga de: ' + position + ' e seu valor de mercado é: ' + market_value
